@@ -6,17 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
     <link rel="icon" href="./img/minecraft.ico">
     <title>HQ minecraft server</title>
 </head>
 <body>
+        <div class="modal">
+            <div style="width: 100%; height: 100%; cursor: pointer;" onclick="closemodal()"></div>
+            <div class="modal_content">
+                <i class="fas fa-times clsbtn" onclick="closemodal()"></i>
+                <h2>Thông tin server:</h2>
+                <br>
+                <p>IP: THPTHQ.aternos.me <i title="click to copy" class="fas fa-copy" onclick="copy(this)"></i></p>
+                <p>Port: 47808</p>
+                <p>Version: Java 1.15.2</p>
+                <p>Thời gian mở: 8:00 - 12:00</p>
+                <p>Số lượng giới hạn: 100</p>
+                <p>Chế độ chơi: Phiêu lưu</p>
+            </div>
+        </div>    
     <header>
         <div class="header">
             <div id="logo"><a href="#">  HQ <span>minecraft</span> server</a></div>
             <div id="navbar">
                 <ul>
                     <li><a href="#">Trang chủ</a></li>
-                    <li><a href="#join">Tham gia</a></li>
+                    <li><a href="#about">Thông tin server</a></li>
                     <li><a href="#guide">Hướng dẫn</a></li>
                     <li><a href="#contact">Liên hệ</a></li>
                 </ul>
@@ -24,92 +39,171 @@
         </div>
         
         <div class="intro">
-            <h1>Server minecraft được build theo quang cảnh thực tế ở trường THPT Hồng Quang </h1>
-            <a href="#join"><button>Tham gia ngay</button></a>
+            <h1>HONG QUANG MINECRAFT SERVER</h1>
+            <button onclick="openmodal()">Tham gia ngay</button>
         </div>
+
+
     </header>
 
-    <div class="body">
-        <div class="main">
-            <div id="join">
-                <h1> - Tham gia - </h1>
-                <div class="disflex">
-                    <div class="contnet">
-                            <p>Tên máy chủ: <span id="svname">A12HQ.aternos.me</span>
-                                <i style="position: relative; cursor: pointer;" title="Copy" class="far fa-copy" onclick="copy()">
-                            </i></p>
-                            <p>Phiên bản: Java 1.15.2</p>
-                            <p>Trạng thái: <span id="status"></span></p>
-                            <p>Số lượng: </p>
-                        <a href="#guide">Bạn không hiểu? Bấm vào đây để xem hướng dẫn</a>
-                    </div>
-                    <img src="./img/bg1.jpg" alt="">
-                </div>
-            </div>
     
-            <div id="guide">
-                <h1> - Hướng dẫn - </h1>
-                <div class="disflex">
-                    <div style="width: 50%; padding: 0 20px;">
-                        <h2>Hướng dẫn tham gia vào game</h2>
-                            <p style="font-weight: 500;">I. Tải TLauncher, Java</p> 
-                            <div class="tutorial">
-                                <ol>
-                                    <li>Truy cập vào <a target="_blank" href="https://tlauncher.org/en/">trang chủ của TLauncher</a> để tải Launcher hoặc <a href="https://tlauncher.org/installer">bấm vào đây</a> để tải ngay bản cho windows</li>
-                                    <li>Truy cập vào <a target="_blank" href="https://tlauncher.org/en/">trang chủ của TLauncher</a> để tải Launcher hoặc <a href="https://tlauncher.org/installer">bấm vào đây</a> để tải ngay bản cho windows</li>
-                                    <li>Truy cập vào <a target="_blank" href="https://tlauncher.org/en/">trang chủ của TLauncher</a> để tải Launcher hoặc <a href="https://tlauncher.org/installer">bấm vào đây</a> để tải ngay bản cho windows</li>
-                                    <li>Truy cập vào <a target="_blank" href="https://tlauncher.org/en/">trang chủ của TLauncher</a> để tải Launcher hoặc <a href="https://tlauncher.org/installer">bấm vào đây</a> để tải ngay bản cho windows</li>
-                                    <li>Truy cập vào <a target="_blank" href="https://tlauncher.org/en/">trang chủ của TLauncher</a> để tải Launcher hoặc <a href="https://tlauncher.org/installer">bấm vào đây</a> để tải ngay bản cho windows</li>
-                                    <li>Truy cập vào <a target="_blank" href="https://tlauncher.org/en/">trang chủ của TLauncher</a> để tải Launcher hoặc <a href="https://tlauncher.org/installer">bấm vào đây</a> để tải ngay bản cho windows</li>
-                                </ol>
-                        </div>
-                        
-                        
-                        <br>
-                            <p style="font-weight: 500;">II. Tham gia server</p>
-                            <div class="tutorial">
-                                <ol>
-                                    <li>Mở TLauncher chọn "Enter the game"</li>
-                                    <a style="cursor: zoom-in;" target="_blank" href="./img/hd.png"><img style="padding: 10px;" width="100%" src="./img/hd.png" alt="" srcset=""></a>
-                                    <li>Chọn Chơi Mạng (Multiplayer)</li>
-                                    <a style="cursor: zoom-in;" target="_blank" href="./img/hd.png"><img style="padding: 10px;" width="100%" src="./img/hd.png" alt="" srcset=""></a>
-                                    <li>Chọn Thêm server (Add server)</li>
-                                    <a style="cursor: zoom-in;" target="_blank" href="./img/hd.png"><img style="padding: 10px;" width="100%" src="./img/hd.png" alt="" srcset=""></a>
-                                    <li>Tại dòng 2, điền ........ sau đó bấm done</li>
-                                    <a style="cursor: zoom-in;" target="_blank" href="./img/hd.png"><img style="padding: 10px;" width="100%" src="./img/hd.png" alt="" srcset=""></a>
-                                    <li>Sau khi xong thì vào phá thôi</li>
-                                </ol>
-                            </div>
-                    </div>
-                    <div style="width: 50%; padding: 0 20px;">
-                        <h2>Hướng dẫn trong game</h2>
-                        <ul>
-                            <li>Dùng W, A, S, D để di chuyển</li>
-                            <li>Bấm Ctrl trong lúc di chuyển để chạy nhanh</li>
-                            <li>Xoay chuột để xoay tầm nhìn</li>
-                            <li>Dùng chuột phải để thao tác với game (Đóng/Mở cửa)</li>
-                            <li>Dùng chuột trái để đánh người khác</li>
-                            <li>Giữ C để zoom</li>
-                            <li>Bấm E để mở túi đồ</li>
-                            <li>Bấm F1 để ẩn HUD (tay, khay đồ)</li>
-                            <li>Bấm F5 để đổi góc nhìn (Nên dùng góc nhìn thứ 3)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>    
-            
-            <div id="contact">
-                <h1> - Liên hệ - </h1>
-                <div class="disflex" style="flex-direction: column;">
-                    <p>Bạn muốn góp ý / thắc mắc về server, có thể liên hệ với chúng mình:</p>
-                    <p>Facebook Admin: <a href="https://www.facebook.com/ndat2408/">Nguyễn Thế Đạt</a> </p>
-                    <p>Facebook Admin: <a href="https://www.facebook.com/tunglam.mai.3781">Mai Tùng Lâm</a> </p>
-                    <p>Facebook Page: <a href="https://www.facebook.com/colonyofnice">Colony of Nice</a> </p>
-                    <p>Email: <a href="mailto:ndat2408@gmail.com">ndat2408@gmail.com</a> </p>
-                </div>
+    <div id="about">
+        <h1>- Thông tin server -</h1>
+        <br>
+        <hr>
+        <div class="people_info">
+            <div class="info_content">
+                <i class="fas fa-server logo"></i><p> <b>IP</b> <br> THPTHQ.aternos.me</p> 
             </div>
-
+            <div class="info_content">
+                <i class="fas fa-lock logo"></i><p><b>Port</b> <br> 47808</p>
+            </div>
+            <div class="info_content">
+                <i class="fab fa-java logo"></i><p><b>Phiên bản</b> <br> Java 1.15.2</p>
+            </div>
+            <div class="info_content">
+                <i class="fas fa-clock logo"></i><p><b>Thời gian mở</b> <br> 8h00 - 12h00</p><p id="status"></p>
+            </div>
+            <div class="info_content">
+                <i class="fas fa-user logo"></i><p><b>Số lượng giới hạn</b> <br> 100</p>
+                
+            </div>
+            <div class="info_content">
+                <i class="fas fa-gamepad logo"></i><p><b>Chế độ chơi</b> <br> Phiêu lưu</p>   
+            </div>
         </div>
+
+        <h1 style="padding-top: 50px;">- Những người cùng tạo nên server -</h1>
+        <br> <hr>
+        <div class="server_info">
+            <div class="info_people">
+                <img src="https://minecraftfaces.com/wp-content/bigfaces/big-steve-face.png" alt="">
+                <p>Tùng Lâm</p>
+                <p>(Lamdeptrai)</p> 
+            </div>
+            <div class="info_people">
+                <img src="https://minecraftfaces.com/wp-content/bigfaces/big-steve-face.png" alt="">
+                <p>Thế Đạt</p>
+                <p>(ndat2408)</p>
+            </div>
+            <div class="info_people">
+                <img src="https://minecraftfaces.com/wp-content/bigfaces/big-steve-face.png" alt="">
+                <p>Khánh Toàn</p> 
+                <p>(A12-PKT)</p>
+            </div>
+            <div class="info_people">
+                <img src="https://minecraftfaces.com/wp-content/bigfaces/big-steve-face.png" alt="">
+                <p>Tuấn Kiệt</p>
+                <p>(PTK0910)</p>
+            </div>
+            <div class="info_people">
+                <img src="https://minecraftfaces.com/wp-content/bigfaces/big-steve-face.png" alt="">
+                <p>Đào Sơn</p>
+                <p>(SWN)</p>
+                
+            </div>
+            <div class="info_people">
+                <img src="https://minecraftfaces.com/wp-content/bigfaces/big-steve-face.png" alt="">
+                <p>Hoàng Quân</p>
+                <p>(Quandepzaibodoi)</p>
+            </div>
+            <div class="info_people">
+                <img src="https://minecraftfaces.com/wp-content/bigfaces/big-steve-face.png" alt="">
+                <p>Bùi Quân</p>
+                <p>(MQuan0810)</p>
+            </div>
+            <div class="info_people">
+                <img src="https://minecraftfaces.com/wp-content/bigfaces/big-steve-face.png" alt="">
+                <p>Khánh Linh</p>
+                <p>(linhmit)</p>
+            </div>
+            <div class="info_people">
+                <img src="https://minecraftfaces.com/wp-content/bigfaces/big-steve-face.png" alt="">
+                <p>Thu Quyên</p>
+                <p>(Thu Quyen)</p>
+            </div>
+            <div class="info_people">
+                <img src="https://minecraftfaces.com/wp-content/bigfaces/big-steve-face.png" alt="">
+                <p>Đăng Mạnh</p>
+                <p>(Manhdepzaibodoi)</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="guide">
+        <h1>- Huớng dẫn -</h1>
+        <br> <hr>
+        <div class="guide_content">
+       <h2>Hướng dẫn tham gia vào game</h2>
+        <p style="font-weight: 500;">I. Tải TLauncher, Java</p> 
+            <div class="tutorial">
+                <ul>
+                    <li>1. Truy cập vào <a target="_blank" href="https://tlauncher.org/en/">trang chủ của TLauncher</a> để tải Launcher hoặc <a href="https://tlauncher.org/installer">bấm vào đây</a> để tải ngay bản cho windows</li>
+                    <a style="cursor: zoom-in;" target="_blank" href="./tutorial/img/1/0.png"><img style="padding: 10px;" src="./tutorial/img/1/0.png" alt="" srcset=""></a>
+                    
+                    <li>2. Sau khi tải xong thì cài đặt như bình thường rồi mở launcher và làm tiếp theo <a href="./#:~:text=ho%E1%BA%B7c%2032%20bit-,II.%20Tham%20gia%20server,-M%E1%BB%9F%20TLauncher%2C%20nh%E1%BA%ADp">hướng dẫn bên dưới</a></li>
+                    
+                    <li>3. Nếu gặp lỗi như hình thì bạn tiến hành tải Java ở <a href="https://www.java.com/en/download/">trang chủ</a> hoặc bấm vào đây để tải bản <a href="https://javadl.sun.com/webapps/download/AutoDL?BundleId=107944">64 bit</a> hoặc <a href="https://javadl.sun.com/webapps/download/AutoDL?BundleId=107943">32 bit</a></a></li>
+                    <a style="cursor: zoom-in;" target="_blank" href="./tutorial/img/1/loi.png"><img style="padding: 10px;" src="./tutorial/img/1/loi.png" alt="" srcset=""></a>
+                </ul>
+        </div>
+        
+        
+        <br>
+            <p style="font-weight: 500;">II. Tham gia server</p>
+            <div class="tutorial">
+                <ul>
+                    <li>1. Mở TLauncher, nhập tên ingame của bạn, chọn 1 trong 5 bản 1.15.2 (nên chọn bản OptiFine) sau đó chọn install, đợi game tải xong thì chọn "Enter the game"</li>
+                    <a style="cursor: zoom-in;" target="_blank" href="./tutorial/img/2/0.png"><img style="padding: 10px;" src="./tutorial/img/2/0.png" alt="" srcset=""></a>
+                    <li>2. Sau khi vào game, chọn Multiplayer (Chơi Mạng)</li>
+                    <a style="cursor: zoom-in;" target="_blank" href="./tutorial/img/2/1.png"><img style="padding: 10px;" src="./tutorial/img/2/1.png" alt="" srcset=""></a>
+                    <li>3. Nếu nó hiện như thế này thì bạn click vào ô "Do not show" sau đó bấm Proceed</li>
+                    <a style="cursor: zoom-in;" target="_blank" href="./tutorial/img/2/2.png"><img style="padding: 10px;" src="./tutorial/img/2/2.png" alt="" srcset=""></a>
+                    <li>4. Sau đó chọn Add server (Thêm máy chủ)</li>
+                    <a style="cursor: zoom-in;" target="_blank" href="./tutorial/img/2/3.png"><img style="padding: 10px;" src="./tutorial/img/2/3.png" alt="" srcset=""></a>
+                    <li>5. Tại dòng 2, điền THPTHQ.aternos.me sau đó bấm done</li>
+                    <a style="cursor: zoom-in;" target="_blank" href="./tutorial/img/2/4.png"><img style="padding: 10px;" src="./tutorial/img/2/4.png" alt="" srcset=""></a>
+                    <li>6. Sau khi xong, server sẽ hiện và bạn chỉ cần bấm vào là có thể vào được server và khám phá rồi. Chúc bạn chơi game vui vẻ</li>
+                    <a style="cursor: zoom-in;" target="_blank" href="./tutorial/img/2/5.png"><img style="padding: 10px;" src="./tutorial/img/2/5.png" alt="" srcset=""></a>
+                </ul>
+            </div>
+            <div style="padding-top: 20px;">
+                <h2>Hướng dẫn tương tác trong game</h2>
+                <ul>
+                    <li>- Dùng W, A, S, D để di chuyển</li>
+                    <li>- Bấm Ctrl trong lúc di chuyển để chạy nhanh</li>
+                    <li>- Xoay chuột để xoay tầm nhìn</li>
+                    <li>- Dùng chuột phải để thao tác với game (Đóng/Mở cửa)</li>
+                    <li>- Dùng chuột trái để đánh người khác</li>
+                    <li>- Bấm T để chat all</li>
+                    <li>- gõ /tell username để chat riêng với bạn của bạn (thay username bằng tên bạn của bạn)</li>
+                    <li>- Giữ C để zoom</li>
+                    <li>- Bấm E để mở túi đồ</li>
+                    <li>- Bấm F1 để ẩn HUD (tay, khay đồ)</li>
+                    <li>- Bấm F5 để đổi góc nhìn (Nên dùng góc nhìn thứ 3)</li>
+            </div>
+        </div>
+    </div>
+    
+    <div id="contact">
+        <h1> - Liên hệ - </h1>
+        <br> <hr>
+        <div class="cotact_info">
+            <div style="width: 60%;">
+                <p>Bạn muốn góp ý / thắc mắc về server, có thể liên hệ với chúng mình qua:</p>
+                <p>Facebook Admin: <a href="https://www.facebook.com/ndat2408/">Nguyễn Thế Đạt</a> </p>
+                <p>Facebook Admin: <a href="https://www.facebook.com/tunglam.mai.3781">Mai Tùng Lâm</a> </p>
+                <p>Facebook Page: <a href="https://www.facebook.com/colonyofnice">Colony of Nice</a> </p>
+                <p>Email: <a href="mailto:ndat2408@gmail.com">ndat2408@gmail.com</a> </p>
+            </div>
+            <div style="width: 40%;">
+                <img width="100%" src="https://scontent.fhan14-2.fna.fbcdn.net/v/t1.15752-9/238196073_2791113037847109_6949140241375150430_n.png?_nc_cat=108&ccb=1-5&_nc_sid=ae9488&_nc_ohc=Qjdc4TLGoREAX-jlpDr&_nc_ht=scontent.fhan14-2.fna&oh=db8b9ff9ad811ba05d6f4360329cb74e&oe=61312FCB" alt="">
+            </div>
+        </div>
+
+    </div>
+
+    </div>
     </div>
 
     <footer>
